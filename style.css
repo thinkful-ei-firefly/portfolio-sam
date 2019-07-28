@@ -74,11 +74,6 @@ nav {
   margin-left: 5px;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(216, 169, 49);
-}
-
 footer {
   position: fixed;
   bottom: 0;
@@ -88,6 +83,7 @@ footer {
   padding-top: 5px;
   text-align: right;
   padding-right: 10px;
+  color: rgb(216, 169, 49);
 }
 
 .container {
@@ -133,7 +129,7 @@ button {
   margin-left: 10px;
 }
 
-button, .project-list-item, .nav-item, .thumbnail-image, .thumbnail-text {
+button, .project-list-item, .nav-item, .thumbnail-image, .thumbnail-text, .contact-info, .contact-link {
   cursor: pointer;
 }
 
@@ -194,6 +190,28 @@ button, .project-list-item, .nav-item, .thumbnail-image, .thumbnail-text {
   color: #A03E04;
   font-size: 16px;
   letter-spacing: .9px;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-title {
+  margin-top: 15vh;
+  margin-left: 10px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0 0 0 0;
+}
+
+.contact-info {
+  margin-left: 20vw;
+  margin-top: 10vh;
+  font-size: 18px;
 }
 
 
@@ -265,6 +283,18 @@ button, .project-list-item, .nav-item, .thumbnail-image, .thumbnail-text {
   .about-page {
     margin-top: 20vh;
   }
+
+
+.contact-title {
+  margin-top: 15vh;
+  margin-left: 10vw;
+}
+
+.contact-info {
+  margin-left: 30vw;
+  margin-top: 10vh;
+  font-size: 28px;
+}
 
 }
 

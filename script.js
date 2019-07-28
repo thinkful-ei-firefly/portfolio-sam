@@ -3,7 +3,7 @@ const projects = [
     name: 'Magic Quiz',
     title: 'Magic Quiz App',
     screenshot: 'screenshots/magic-quiz.png',
-    builtWith: 'Built with Javascript and jQuery',
+    builtWith: 'Javascript and jQuery',
     content: 'This is a basic quiz app that loads a quiz at random from a repository of quizzes. The questions all pertain to the Magic: The Gathering card game. As a bonus I also designed a page to make writing additional quizzes easier with a form that you can fill out and have it output the result into the console in a form that can be easily copy/pasted into the repository of quizzes.',
     page: 'https://nasaljack.github.io/magic-quiz-app/',
     repo: 'https://github.com/NasalJack/magic-quiz-app'
@@ -12,7 +12,7 @@ const projects = [
     name: 'Buffy Quiz',
     title: 'Buffy Quiz App',
     screenshot: 'screenshots/buffy-quiz.png',
-    builtWith: 'Built with Javascript and jQuery',
+    builtWith: 'Javascript and jQuery',
     content: 'This is a quiz that tests your knowledge of Buffy: the Vampire Slayer trivia. Each time the quiz loads five questions are chosen at random from the repository of possible questions, and the order of the possible answers to each question are randomized as well. No two quizes will ever be the exact same.',
     page: 'https://thinkful-ei-firefly.github.io/Quiz-App-Sam-Ben/',
     repo: 'https://github.com/thinkful-ei-firefly/Quiz-App-Sam-Ben'
@@ -30,7 +30,7 @@ const projects = [
 
 function loadLanding() {
   $('main').html(`
-    <div class="intro">Hi, my name is Sam and I'm a fullstack developer</div>
+    <div class="intro">Hi, my name is Sam and I'm a full stack developer</div>
     <img class="hero" src="screenshots/hero.png" alt="Me standing in front of a lake">
     <button class="about-me-link">Learn More</button>
   `);
@@ -39,7 +39,7 @@ function loadLanding() {
 function loadAboutMe() {
   $('main').html(`
     <div class="about-page">
-      <div class="about">I'm a fullstack developer and (future) graduate of the Thinkful Fullstack Web Development bootcamp. I'm an avid coder because every challenge I'm presented with is just another puzzle or riddle waiting to be solved. I love finding ways to minimize and optimize the code I've written to achieve the cleanest possible solution.</div>
+      <div class="about">I'm a full stack developer and (future) graduate of the Thinkful Full Stack Web Development bootcamp. I'm an avid coder because every challenge I'm presented with is just another puzzle or riddle waiting to be solved. I love finding ways to minimize and optimize the code I've written to achieve the cleanest possible solution.</div>
       <div class="about">Outside of coding I'm a video gamer, board gamer, and card gamer. I also enjoy playing tennis, bike riding, hiking, rock climbing, and binging quality television.</div>
       <button class="project-link">View my Projects</button>
     </div>
@@ -78,13 +78,24 @@ function loadProject(project) {
     <h2 class="project-title">${project.title}</h2>
     <img class="screenshot" src="${project.screenshot}" alt="Example Screenshot of the App">
     <div class="content">
-      <p>${project.builtWith}</p>
+      <p>Bult with ${project.builtWith}</p>
       <p>${project.content}</p>
       <div class="link-buttons">
         <button class="link site-link" data-link="${project.page}">View App</button>
         <button class="link repo-link" data-link="${project.repo}">Visit Repo</button>
       </div>
     </div>
+  `);
+}
+
+function loadContact() {
+  $('main').html(`
+    <h2 class="contact-title">You can reach me at</h2>
+    <ul class="contact-list">
+      <li class="contact-info"><a target="_blank" href="mailto:sam.walker@comcast.net?Subject=In%20regards%20to%20your%20profile" target="_top">sam.walker@comcast.net</a></li>
+      <li class="contact-info"><a target="_blank" href="https://github.com/NasalJack">github.com/NasalJack</a></li>
+      <li class="contact-info"><a target="_blank" href="https://www.linkedin.com/in/sam-walker-25aba918b/">Linkedin</a></li>
+    </ul>
   `);
 }
 
@@ -141,8 +152,11 @@ function handleProjectClicked() {
   });
 }
 
-function handleEmailClicked() {
-
+function handleContactClicked() {
+  $('.contact-link').click(function() {
+    loadContact();
+  });
+  
 }
 
 function onPageLoad() {
@@ -151,7 +165,7 @@ function onPageLoad() {
   handleAboutMeClicked();
   handleProjectsClicked();
   handleProjectClicked();
-  handleEmailClicked();
+  handleContactClicked();
   loadLanding();
 }
 
