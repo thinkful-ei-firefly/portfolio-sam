@@ -100,27 +100,42 @@ function handleLinkClicked() {
 }
 
 function handleNameClicked() {
-
+  $('.nav-name').click(function() {
+    loadLanding();
+  });
 }
 
 function handleAboutMeClicked() {
-
+  $('.nav-about').click(function() {
+    loadAboutMe();
+  });
+  $('main').on('click', '.about-me-link', function() {
+    loadAboutMe();
+  });
 }
 
 function handleProjectsClicked() {
   $('.nav-projects').click(function() {
     loadProjects();
   });
+  $('main').on('click', '.project-link', function() {
+    loadProjects();
+  });
 }
 
 function handleProjectClicked() {
-  $('main').on('click', '.project-list-item', function(event) {
+  $('main').on('click', '.project-list-item', function() {
     const projectName = $(this).html();
     const project = findProjectByName(projectName);
     loadProject(project[0]);
   });
-  $('main').on('click', '.project-thumbnail', function(event) {
-    const projectName = $(this).find('p').html();
+  $('main').on('click', '.thumbnail-image', function() {
+    const projectName = $(this).parent().find('p').html();
+    const project = findProjectByName(projectName);
+    loadProject(project[0]);
+  });
+  $('main').on('click', '.thumbnail-text', function() {
+    const projectName = $(this).html();
     const project = findProjectByName(projectName);
     loadProject(project[0]);
   });
