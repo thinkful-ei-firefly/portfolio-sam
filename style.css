@@ -7,28 +7,37 @@ html, body {
 }
 
 body {
-  text-align: center;
   margin-right: auto;
   margin-left: auto;
+  background-color: #cad6ec;
+  font-size: 16px;
+  padding: 0 0 0 0;
 }
 
+article {
+  padding-top: 15px;
+  padding-bottom: 40px;
+  margin-left: 100px;
+  padding: 5px;
+}
 
-ul {
+.project-list {
   display: flex;
   height: 100%;
-  padding-top: 160px;
-  background-color: lightgrey;
+  padding-top: 190px;
+  padding-left: 10px;
+  background-color: rgba(41, 56, 83, .8);
   width: 100px;
-  position: absolute;
+  position: fixed;
   list-style-type: none;
   flex-direction: column;
-  padding-left: 0px;
-  position: absolute;
+  margin-top: -10px;
 }
 
-li {
+.project-list-item {
   margin-top: 15px;
   margin-bottom: 15px;
+  color: rgb(216, 169, 49);
 }
 
 nav {
@@ -37,9 +46,23 @@ nav {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: grey;
+  background-color: rgba(33, 62, 124, .8);
+  color: rgb(216, 169, 49);
   height: 30px;
-  padding-top: 5px;
+  padding-top: 0;
+}
+
+.nav-ul {
+  list-style: none;
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.nav-item {
+  margin-left: 5px;
 }
 
 footer {
@@ -47,20 +70,23 @@ footer {
   bottom: 0;
   width: 100%;
   height: 30px;
-  background-color: grey;
+  background-color: rgba(33, 62, 124, .8);
+  color: rgb(216, 169, 49);
   padding-top: 5px;
 }
 
 .container {
   position: relative;
   min-height: 100%;
+  padding: 0 0 0 0 ;
+  margin: 0 0 0 0;
 }
 
-h2 {
+.project-title {
   margin-top: 0;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: rgb(90, 90, 90);
+  text-align: center;
   margin-bottom: 0;
 }
 
@@ -68,27 +94,9 @@ h2 {
   margin-top: 0;
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: grey;
 }
 
 .content {
-  background-color: rgb(90, 90, 90);
-  height: 300px;
-  padding-top: 100px;
+  color: black;
 }
 
-h2, .screenshot, .content {
-  margin-left: 100px;
-}
-
-main {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.section {
-  height: 200px;
-  padding-top: 100px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
